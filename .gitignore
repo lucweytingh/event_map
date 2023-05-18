@@ -1,7 +1,15 @@
+# Project specific
+.env
+map.html
+
+# Mac
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.py#
 
 # C extensions
 *.so

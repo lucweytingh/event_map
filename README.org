@@ -1,0 +1,49 @@
+#+BIND: org-export-use-babel nil
+#+TITLE: README
+#+AUTHOR: Paul Lodder and Luc Weytingh
+* intro
+Code to create a map view for available events scraped from some websites
+
+Now supported:
+- echtzeitmusik.de
+
+* setting up
+1. Make a =virtualenv=, I used python3.9, and inside it install requirements \\
+   #+BEGIN_SRC sh
+   pip install -r requirements.txt
+   #+END_SRC
+
+   and then:
+   #+BEGIN_SRC sh
+    pip install -e .
+   #+END_SRC
+
+2. Create a =.env= file \\
+   A =.env= file is used to keep track of machine-specific variables. Create a
+   =.env= in the root of this project with the following values set:
+   #+BEGIN_EXAMPLE sh
+   PROJECT_DIR=/path/to/bandcamp_suggestor
+   #+END_EXAMPLE
+
+   To access these variables in python code run:
+   #+BEGIN_SRC python
+   from decouple import config
+   config("PROJECT_DIR")
+   #+END_SRC
+* usage
+#+BEGIN_SRC python
+from src.location_mapper import LocationMapper
+from src.echtzeitmusik import EchtZeitMusik
+
+ezm = EchtZeitMusik()
+names, descriptions, addresses, coordinates = ezm.get_events()
+
+lm = LocationMapper()
+lm.create_map(names, descriptions, addresses, coordinates)
+lm.open_map()
+#+END_SRC
+
+This will scrape the events from echtzeitmusik, and open a map with the events
+marked on it.
+
+The above procedure is also saved in scripts/open_event_map.py
