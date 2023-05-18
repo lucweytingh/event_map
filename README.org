@@ -43,7 +43,7 @@ lm.create_map(names, descriptions, addresses, coordinates)
 lm.open_map()
 #+END_SRC
 
-This will scrape the events from echtzeitmusik, and open a map with the events
+This will scrape today's events from echtzeitmusik, and open a map with the events
 marked on it.
 
 The above procedure is also saved in scripts/open_event_map.py
