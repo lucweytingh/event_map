@@ -1,6 +1,6 @@
 #+BIND: org-export-use-babel nil
-#+TITLE: README
-#+AUTHOR: Paul Lodder and Luc Weytingh
+#+TITLE: Event map
+#+AUTHOR: Luc Weytingh
 * intro
 Code to create a map view for available events scraped from some websites
 
