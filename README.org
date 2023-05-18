@@ -1,10 +1,10 @@
 #+BIND: org-export-use-babel nil
 #+TITLE: Event map
 #+AUTHOR: Luc Weytingh
-* intro
-Code to create a map view for available events scraped from some websites
 
-Now supported:
+Code to create a map view for available events scraped from event websites
+
+Currently supported:
 - echtzeitmusik.de
 
 * setting up
