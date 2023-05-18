@@ -22,7 +22,7 @@ Currently supported:
    A =.env= file is used to keep track of machine-specific variables. Create a
    =.env= in the root of this project with the following values set:
    #+BEGIN_EXAMPLE sh
-   PROJECT_DIR=/path/to/bandcamp_suggestor
+   PROJECT_DIR=/path/to/event_map
    #+END_EXAMPLE
 
    To access these variables in python code run:
