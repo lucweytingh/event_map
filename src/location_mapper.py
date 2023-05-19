@@ -49,8 +49,8 @@ class LocationMapper:
         """Creates html popups from the given names, addresses, and descriptions"""
         popups = [
             folium.Popup(
-                f"<h4>{names[i]}</h4><h5>{addresses[i]}</h5><p>{descriptions[i]}</p>",
-                max_width=3000,
+                f"<h2>{names[i]}</h2><h4>{addresses[i]}</h4><p style='font-size:15px'>{descriptions[i]}</p>",
+                max_width=600,
             )
             for i in range(len(names))
         ]
